@@ -20,7 +20,7 @@ import {
   MenuButton,
   MenuDivider,
   MenuItem,
-  MenuList,
+  MenuList
 } from '@chakra-ui/react';
 import {
   FiHome,
@@ -30,10 +30,11 @@ import {
   FiSettings,
   FiMenu,
   FiBell,
-  FiChevronDown,
+  FiChevronDown
 } from 'react-icons/fi';
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
+import ColorModeToggle from './colorModeToggle';
 
 interface LinkItemProps {
   name: string;
@@ -183,6 +184,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
           aria-label="open menu"
           icon={<FiBell />}
         />
+        <ColorModeToggle />
         <Flex alignItems={'center'}>
           <Menu>
             <MenuButton
